@@ -6,3 +6,4 @@ log/*.log
 tmp/*
 pkg/*
 html5-boilerplate-*.gem
+Gemfile.lock
