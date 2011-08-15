@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class PublicControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  test "should get home" do
+    get :home
+    assert_response :success
   end
+
 end

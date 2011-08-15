@@ -30,4 +30,3 @@ gem 'sqlite3'
 #   gem 'webrat'
 # end
 
-gem 'pg'
