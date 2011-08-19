@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110819020133) do
+ActiveRecord::Schema.define(:version => 20110819025841) do
 
   create_table "users", :force => true do |t|
-    t.string   "username",                    :null => false
-    t.string   "password",                    :null => false
-    t.string   "first_name",                  :null => false
-    t.string   "last_name",                   :null => false
+    t.string   "username",    :default => "", :null => false
+    t.string   "password",    :default => "", :null => false
+    t.string   "first_name",  :default => "", :null => false
+    t.string   "last_name",   :default => "", :null => false
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
