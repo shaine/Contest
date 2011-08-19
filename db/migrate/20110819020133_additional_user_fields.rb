@@ -1,7 +1,7 @@
 class AdditionalUserFields < ActiveRecord::Migration
   def self.up
     change_table :users do |t|
-      t.string :gender, :null => false
+      t.string :gender, :null => false, :default => ''
       t.string :agent
       t.string :high_school
       t.string :manager
