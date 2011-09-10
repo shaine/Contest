@@ -3,3 +3,7 @@
 
 en:
   hello: "Hello world"
+  helpers:
+    label:
+      user:
+        password_confirmation: "Confirm Your Password"
