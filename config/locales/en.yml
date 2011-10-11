@@ -7,3 +7,4 @@ en:
     label:
       user:
         password_confirmation: "Confirm Your Password"
+        username: 'Email'
