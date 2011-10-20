@@ -7,6 +7,25 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <header>
+    <h1>Your Team</h1>
+    
+    <h2>Login</h2>
+    <%= form_for(@user) do |f| %>
+      <div class="field">
+        <%= f.label :username %><br />
+        <%= f.text_field :username %>
+      </div>
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password %>
+      </div>
+      
+      <input type="checkbox" id="stay_logged_in"> <label for="stay_logged_in">Keep me logged in</label>
+      
+      <p><a href="#">Forgot my password</a></p>
+    <% end %>
+  </header>
 
 <%= yield %>
 
