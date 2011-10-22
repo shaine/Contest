@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
     HUMAN_ATTRIBUTES[attribute] || super  
   end
   
-  def authenticate(user, password)
+  def self.authenticate(user, password)
     password = Digest::MD5.hexdigest(password)
     
     User.where(:username => user, :password => password).first
