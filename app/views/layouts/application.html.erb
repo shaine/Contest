@@ -11,7 +11,7 @@
     <h1>Your Team</h1>
     
     <h2>Login</h2>
-    <%= form_for @user, :url => { :controller => "users", :action => "login" } do |f| %>
+    <%= form_for :login_user, :url => { :controller => "users", :action => "login" } do |f| %>
       <div class="field">
         <%= f.label :username %><br />
         <%= f.text_field :username %>
