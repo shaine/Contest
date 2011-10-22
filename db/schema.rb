@@ -10,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110819025841) do
+ActiveRecord::Schema.define(:version => 20111011051406) do
+
+  create_table "friendships", :force => true do |t|
+    t.integer  "user_id",     :null => false
+    t.integer  "teammate_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "statuses", :force => true do |t|
+    t.integer  "user_id",    :null => false
+    t.text     "content",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username",    :default => "", :null => false
@@ -25,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20110819025841) do
     t.string   "high_school"
     t.string   "manager"
     t.string   "home_town"
+    t.string   "job"
   end
 
 end

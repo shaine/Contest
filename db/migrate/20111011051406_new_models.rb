@@ -12,9 +12,19 @@ class NewModels < ActiveRecord::Migration
       t.text    :content, :null => false
       
       t.timestamps
+    end
+    
+    change_table :users do |t|
+      t.string :job
+    end
   end
 
   def self.down
     drop_table :friendships
+    drop_table :statuses
+    
+    change_table :users do |t|
+      t.remove :job
+    end
   end
 end
