@@ -2,10 +2,12 @@
 %h2 Login
 = form_for :login_user, :url => { :controller => "users", :action => "login" } do |f|
   .field
-    = f.label :username %br
+    = f.label :username
+    %br
     = f.text_field :username
   .field
-    = f.label :password %br
+    = f.label :password
+    %br
     = f.password_field :password
   
   = f.submit :value=>'Login'
