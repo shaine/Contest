@@ -21,6 +21,57 @@
 
 -# All JavaScript at the bottom, except for Modernizr and Respond.
 -# Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-= javascript_include_tag 'modernizr.min', 'respond.min'
+= javascript_include_tag 'modernizr.min', 'respond.min', 'jquery-1.3.2.min.js', 'dropdown.js', 'jquery.cycle.all.js'
+
+:javascript
+   $(function(){     
+         $('#slideshow').cycle({
+            timeout: 5000,  // milliseconds between slide transitions (0 to disable auto advance)
+            fx:      'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...            
+            pager:   '#pager',  // selector for element to use as pager container
+            pause:   0,   // true to enable "pause on hover"
+      cleartypeNoBg: true, // set to true to disable extra cleartype fixing (leave false to force background color setting on slides)
+            pauseOnPagerHover: 0 // true to pause when hovering over pager link
+        });
+     });
+
+= javascript_include_tag 'cufon-yui.js', 'Grandesign_Neue_Serif_400-Grandesign_Neue_Serif_700-Grandesign_Neue_Serif_italic_400.font.js'
+
+:javascript
+            Cufon.replace('h1') ('h2') ('h3') ('h4') ('h5') ('h6') ('#mainmenu_alt ul li a', { 
+        hover: true
+       }) ('.butmore', { 
+        textShadow: '0px 1px 0px #fff'
+       }) ('#twitter', { 
+        textShadow: '0px 1px 0px #fff'
+       });
+
+= javascript_include_tag 'cufon-yui.js', 'Grandesign_Neue_Serif_400-Grandesign_Neue_Serif_700-Grandesign_Neue_Serif_italic_400.font.js'
+
+:javascript
+  $(function() {
+    //for homepage slideshow
+  $('#slideshow').cycle({
+            timeout: 5000,  // milliseconds between slide transitions (0 to disable auto advance)
+            fx:      'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc... 
+      prev:   '#slideprev', // selector for element to use as click trigger for next slide  
+      next:   '#slidenext', // selector for element to use as click trigger for previous slide 
+            pause:   0,   // true to enable "pause on hover"
+      cleartypeNoBg:   true, // set to true to disable extra cleartype fixing (leave false to force background color setting on slides) 
+            pauseOnPagerHover: 0 // true to pause when hovering over pager link
+    });
+  
+  //for scroll box
+  $('#container_scroll').cycle({
+            timeout: 0,  // milliseconds between slide transitions (0 to disable auto advance)
+            fx:     'scrollHorz', // choose your transition type, ex: fade, scrollUp, shuffle, etc...     
+      prev:   '#arrowprev', // selector for element to use as click trigger for next slide  
+      next:   '#arrownext', // selector for element to use as click trigger for previous slide 
+      cleartypeNoBg:   true, // set to true to disable extra cleartype fixing (leave false to force background color setting on slides)
+      height:154, // container height 
+            pauseOnPagerHover: 0 // true to pause when hovering over pager link
+    });
+       
+});
 
 = csrf_meta_tag

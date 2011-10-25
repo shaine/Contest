@@ -8,15 +8,19 @@
   
   %body{ :class => "#{controller.controller_name}" }
     #container
-      %header#header
-        = render "layouts/header"
+      #top_ridge
+      #main
+        #top_alt
+          %header#header
+            = render "layouts/header"
         
-      #main{ :role => 'main' }
-        = render "layouts/flashes"
-        = yield
+          #main{ :role => 'main' }
+            = render "layouts/flashes"
+            = yield
         
-      %footer#footer
-        = render "layouts/footer"
+          #footer
+            #footer_area
+              = render "layouts/footer"
         
-    -# Javascript at the bottom for fast page loading
-    = render "layouts/javascripts"
+        -# Javascript at the bottom for fast page loading
+        = render "layouts/javascripts"
