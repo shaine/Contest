@@ -1,1 +1,17 @@
-%h1 Header
+%h1 Your Team
+%h2 Login
+= form_for :login_user, :url => { :controller => "users", :action => "login" } do |f|
+  .field
+    = f.label :username %br
+    = f.text_field :username
+  .field
+    = f.label :password %br
+    = f.password_field :password
+  
+  = f.submit :value=>'Login'
+  
+  %input(type="checkbox" id="stay_logged_in")
+  %label(for="stay_logged_in") Keep me logged in
+  
+  %p
+    %a(href="#") Forgot my password

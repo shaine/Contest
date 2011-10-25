@@ -30,3 +30,6 @@ gem 'sqlite3'
 #   gem 'webrat'
 # end
 
+gem "compass"
+gem "haml"
+gem "html5-boilerplate"
