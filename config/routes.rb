@@ -4,8 +4,13 @@ Contest::Application.routes.draw do
   get "users/logout"
 
   resources :users
-
-  get "public/home"
+  
+  match 'terms' => 'public#terms'
+  match 'privacy' => 'public#privacy'
+  match 'news' => 'public#news'
+  match 'about' => 'public#about'
+  match 'careers' => 'public#careers'
+  match 'contact' => 'public#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

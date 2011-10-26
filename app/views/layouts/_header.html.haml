@@ -1,49 +1,45 @@
 #top_alt
   #top_area_alt
     #logo_alt
-      #a{:href=>"/"}
-        %img{:src=>"images/logo.png", :alt=>""}
+      %h1
+        %a{:href=>"/"}
+          Your Team
     #mainmenu_alt
       %ul#menu2
-        %li.current
-          %a{:href=>"#"} Home
-          %span.descnav Welcome to Metrosite
         %li
-          %a{:href=>"#"} About
+          %a{:href=>"terms"} Terms &amp; Conditions
+          %span.descnav You agreed to these already
+        %li
+          %a{:href=>"privacy"} Privacy
+          %span.descnav About things about you
+        %li
+          %a{:href=>"news"} News
+          %span.descnav Things and stuff!
+        %li
+          %a{:href=>"about"} About
           %span.descnav About our company
         %li
-          %a{:href=>"#"} Services
-          %span.descnav What we offers
+          %a{:href=>"careers"} Careers
+          %span.descnav Work here
         %li
-          %a{:href=>"#"} Portfolio
-          %span.descnav Our best project
-        %li
-          %a{:href=>"#"} Blog
-          %span.descnav Inspiring story
-        %li
-          %a{:href=>"#"} Contact
-          %span.descnav Send us an email
-        %li
-          %a{:href=>"#"} Pages
-          %span.descnav Other pages
+          %a{:href=>"contact"} Contact 
+          %span.descnav Write stuff and we'll read it
 
-#header
-  %h1 Your Team
-  %h2 Login
-  = form_for :login_user, :url => { :controller => "users", :action => "login" } do |f|
-    .field
-      = f.label :username
-      %br
-      = f.text_field :username
-    .field
-      = f.label :password
-      %br
-      = f.password_field :password
+    %h2 Login
+    = form_for :login_user, :url => { :controller => "users", :action => "login" } do |f|
+      .field
+        = f.label :username
+        %br
+        = f.text_field :username
+      .field
+        = f.label :password
+        %br
+        = f.password_field :password
 
-    = f.submit :value=>'Login'
+      = f.submit :value=>'Login'
     
-    %input{:type=>"checkbox", :id=>"stay_logged_in"}
-    %label{:for=>"stay_logged_in"} Keep me logged in
+      %input{:type=>"checkbox", :id=>"stay_logged_in"}
+      %label{:for=>"stay_logged_in"} Keep me logged in
     
-    %p
-      %a{:href=>"#"} Forgot my password
+      %p
+        %a{:href=>"#"} Forgot my password
