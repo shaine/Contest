@@ -1,30 +1,58 @@
-#top_area_alt
-  #logo_alt
-    #a{:href=>"/"}
-  #mainmenu_alt
+#top_alt
+  #top_area_alt
+    #logo_alt
+      #a{:href=>"/"}
+        %img{:src=>"images/logo.png", :alt=>""}
+    #mainmenu_alt
+      %ul#menu2
+        %li.current
+          %a{:href=>"#"} Home
+          %span.descnav Welcome to Metrosite
+        %li
+          %a{:href=>"#"} About
+          %span.descnav About our company
+        %li
+          %a{:href=>"#"} Services
+          %span.descnav What we offers
+        %li
+          %a{:href=>"#"} Portfolio
+          %span.descnav Our best project
+        %li
+          %a{:href=>"#"} Blog
+          %span.descnav Inspiring story
+        %li
+          %a{:href=>"#"} Contact
+          %span.descnav Send us an email
+        %li
+          %a{:href=>"#"} Pages
+          %span.descnav Other pages
+            #ul
+              %li
+                %a{:href=>"#"} FAQ page
+              %li
+                %a{:href=>"#"} Element page
+              %li
+                %a{:href=>"#"} Single page
+              %li
+                %a{:href=>"#"} Fullwidth page
 
+#header
+  %h1 Your Team
+  %h2 Login
+  = form_for :login_user, :url => { :controller => "users", :action => "login" } do |f|
+    .field
+      = f.label :username
+      %br
+      = f.text_field :username
+    .field
+      = f.label :password
+      %br
+      = f.password_field :password
 
+    = f.submit :value=>'Login'
 
+    %input#stay_logged_in{:type="checkbox"}
+    %label{:for="stay_logged_in"} Keep me logged in
 
-
-
-
-%h1 Your Team
-%h2 Login
-= form_for :login_user, :url => { :controller => "users", :action => "login" } do |f|
-  .field
-    = f.label :username
-    %br
-    = f.text_field :username
-  .field
-    = f.label :password
-    %br
-    = f.password_field :password
-  
-  = f.submit :value=>'Login'
-  
-  %input(type="checkbox" id="stay_logged_in")
-  %label(for="stay_logged_in") Keep me logged in
-  
-  %p
-    %a(href="#") Forgot my password
+    %p
+      %a{:href=>"#"} Forgot my password
