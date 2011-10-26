@@ -26,15 +26,6 @@
         %li
           %a{:href=>"#"} Pages
           %span.descnav Other pages
-            #ul
-              %li
-                %a{:href=>"#"} FAQ page
-              %li
-                %a{:href=>"#"} Element page
-              %li
-                %a{:href=>"#"} Single page
-              %li
-                %a{:href=>"#"} Fullwidth page
 
 #header
   %h1 Your Team
@@ -50,9 +41,9 @@
       = f.password_field :password
 
     = f.submit :value=>'Login'
-
-    %input#stay_logged_in{:type="checkbox"}
-    %label{:for="stay_logged_in"} Keep me logged in
-
+    
+    %input{:type=>"checkbox", :id=>"stay_logged_in"}
+    %label{:for=>"stay_logged_in"} Keep me logged in
+    
     %p
       %a{:href=>"#"} Forgot my password
