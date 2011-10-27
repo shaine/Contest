@@ -1,4 +1,5 @@
 #flash
   - flash.each do |key, value|
-    .message{ :class => key }
-      %p= value
+    - if value.kind_of? String
+      .message{ :class => key }
+        %p= value

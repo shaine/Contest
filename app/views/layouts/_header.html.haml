@@ -30,6 +30,7 @@
         = f.text_field :username, :placeholder => "username"
       .field
         = f.password_field :password, :placeholder => "password"
+      = f.submit :value=>'Login'
       %br
       .field
         %input{:type=>"checkbox", :id=>"stay_logged_in"}

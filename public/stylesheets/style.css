@@ -523,7 +523,7 @@ span.dropcap {
 }
 
 #logo_alt{
-	text-align:center;
+  padding-left: 150px;
 }
 
 #mainmenu_alt{
@@ -1320,7 +1320,7 @@ fieldset{
 #login_form {
   position: absolute;
   top: 30px;
-  right: 25px;
+  right: 38px;
 }
 
 #login_form .field {
