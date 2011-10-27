@@ -412,7 +412,8 @@ span.dropcap {
 ------------------------------------------------------*/
 #container{
 	width:980px;
-	margin:20px auto
+	margin:20px auto;
+	position:relative;
 }
 #top_ridge{
 	height:10px;
@@ -1306,4 +1307,33 @@ fieldset{
 	padding:5px 0 0 0;
 	text-align:center;
 	height:65px;
+}
+
+#top_alt {
+  height: 120px;
+}
+
+#top_area_alt {
+  height: 120px;
+}
+
+#login_form {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+}
+
+#login_form .field {
+  display: inline-block;
+  width: 175px;
+}
+
+.left_col {
+  float: left;
+  width: 500px;
+}
+
+.right_col {
+  float: right;
+  width: 250px;
 }

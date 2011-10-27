@@ -25,21 +25,14 @@
           %a{:href=>"contact"} Contact 
           %span.descnav Write stuff and we'll read it
 
-    %h2 Login
-    = form_for :login_user, :url => { :controller => "users", :action => "login" } do |f|
+    = form_for :login_user, :html => { :id => "login_form" }, :url => { :controller => "users", :action => "login" } do |f|
       .field
-        = f.label :username
-        %br
-        = f.text_field :username
+        = f.text_field :username, :placeholder => "username"
       .field
-        = f.label :password
-        %br
-        = f.password_field :password
-
-      = f.submit :value=>'Login'
-    
-      %input{:type=>"checkbox", :id=>"stay_logged_in"}
-      %label{:for=>"stay_logged_in"} Keep me logged in
-    
-      %p
+        = f.password_field :password, :placeholder => "password"
+      %br
+      .field
+        %input{:type=>"checkbox", :id=>"stay_logged_in"}
+        %label{:for=>"stay_logged_in"} Keep me logged in
+      .field
         %a{:href=>"#"} Forgot my password
