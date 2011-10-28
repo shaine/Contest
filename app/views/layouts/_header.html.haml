@@ -26,14 +26,19 @@
           %span.descnav Write stuff and we'll read it
 
     = form_for :login_user, :html => { :id => "login_form" }, :url => { :controller => "users", :action => "login" } do |f|
-      .field
-        = f.text_field :username, :placeholder => "username"
-      .field
-        = f.password_field :password, :placeholder => "password"
-      = f.submit :value=>'Login'
-      %br
-      .field
-        %input{:type=>"checkbox", :id=>"stay_logged_in"}
-        %label{:for=>"stay_logged_in"} Keep me logged in
-      .field
-        %a{:href=>"#"} Forgot my password
+      - if(!logged_in?)
+        .field
+          = f.text_field :username, :placeholder => "username"
+        .field
+          = f.password_field :password, :placeholder => "password"
+
+        = f.submit :value=>'Login'
+      
+        %br
+        .field
+          %input{:type=>"checkbox", :id=>"stay_logged_in"}
+          %label{:for=>"stay_logged_in"} Keep me logged in
+        .field
+          %a{:href=>"#"} Forgot my password
+      - else
+        %a{:href=>"/users/logout"} Logout

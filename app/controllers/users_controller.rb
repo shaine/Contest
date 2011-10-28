@@ -6,7 +6,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(@user, :notice => 'User was successfully created.') }
+        session[:user] = @user
+        
+        redirect_to root_url
       else
         flash[:user] = @user
         format.html { redirect_to root_path }
@@ -17,8 +19,7 @@ class UsersController < ApplicationController
   def login
     if request.post?
       if session[:user] = User.authenticate(params[:login_user][:username], params[:login_user][:password])
-        flash[:message] = "Login successful"
-        redirect_to_stored
+        redirect_to root_url
       else
         flash[:warning] = "Login unsuccessful"
         
@@ -30,6 +31,6 @@ class UsersController < ApplicationController
   def logout
     session[:user] = nil
     flash[:message] = 'Logged out'
-    redirect_to :action => 'login'
+    redirect_to root_url
   end
 end
