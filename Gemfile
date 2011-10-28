@@ -33,3 +33,9 @@ gem 'sqlite3'
 gem "compass"
 gem "haml"
 gem "html5-boilerplate"
+
+group :test do
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'capybara-webkit'
+end
