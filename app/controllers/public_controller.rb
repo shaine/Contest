@@ -5,6 +5,8 @@ class PublicController < ApplicationController
     else
       @user = User.new
     end
+    
+    render :private
   end
 
 end

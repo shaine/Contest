@@ -1,0 +1,84 @@
+#content_main
+  %h1.title_page
+    = current_user.first_name
+    = current_user.last_name
+  
+  %p.italic-text Neque porro quisquam qui dolorem ipsum quia dolor sit amet, consectetur adip civelit, sed quia non numquam eius modi tempora incidunt labore dolore magna aliquam quaerat voluptatem corporis suscipit laboriosam.
+  %p Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et volup tates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delec tus ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperioresrepe.
+  %p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conse quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, quito dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi temu
+  %br
+  
+  .two_column
+    .title-border
+      %img.imgleft{:src=>"images/icon3.png", :alt=>""}
+      %h3 Meet the owners
+      %span Cupidatat non proident sunt in culpalo
+    
+    %ul.row
+      %li
+        %img.imgleft{:src=>"images/team.gif", :alt=>""}
+        %strong Mr. Nugraha Kusuma
+        %br
+        %span Similique sunt in culpa quilos officia  deserunt mollitia animi idest laborul dolorum fuga et harum quidem erum facilis est et expedita
+      %li
+        %img.imgleft{:src=>"images/team.gif", :alt=>""}
+        %strong Mr. Nugraha Kusuma
+        %br
+        %span Similique sunt in culpa quilos officia  deserunt mollitia animi idest laborul dolorum fuga et harum quidem erum facilis est et expedita
+  
+  .two_column.nomargin
+    .title-border
+      %img.imgleft{:src=>"images/icon4.png", :alt=>""}
+      %h3 Why should us?
+      %span taque earum rerum hic tenetur asapi
+      %span Et harum quidem rerum facilis expedita distinctio. nam libero tempore, cum soluta nobis eligenditu optio cumque nihil impedit quo minus id quodisa
+      
+      %ul.checklist
+        %li Quibusdam et aut officiis debitis
+        %li Corporis suscipit laboriosam
+        %li Excepturi sint occaecati cupiditate
+        %li Voluptates repudiandae molestiae
+        %li Adipisicing elitsed do eiusmod
+  .clr
+
+#content_right
+  #sidebar
+    %ul
+      %li
+        %h2 Recommended Team Members:
+        .side_box
+          .title-border
+            %img.imgleft{:src=>"images/icon3.png", :alt=>""}
+            %h3 Chad Grange
+            %span Lawyer
+            %br
+            %span Belongs to 38 teams
+            %br
+            %a{:href=>""} Add to your team
+          .title-border
+            %img.imgleft{:src=>"images/icon3.png", :alt=>""}
+            %h3 Jackson Grange
+            %span Real Estate Agent
+            %br
+            %span Belongs to 8 teams
+            %br
+            %a{:href=>""} Add to your team
+            
+      %li
+        %h2 Survey:
+        .side_box
+          #cycle_box
+            %ul.widget_cycle
+              %li
+                %blockquote
+                  %div Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Ut enim ad minim veniam.
+                %span.testi_name
+                  %strong Mark Simon
+                  , Sample Inc
+              %li
+                %blockquote
+                  %div Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Ut enim ad minim veniam.
+                %span.testi_name
+                  %strong Mark Simon
+                  , Sample Inc
+.clr
