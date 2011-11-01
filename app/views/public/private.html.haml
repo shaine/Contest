@@ -1,7 +1,6 @@
 #content_main
   %h1.title_page
-    = current_user.first_name
-    = current_user.last_name
+    Dashboard
   
   %p.italic-text Neque porro quisquam qui dolorem ipsum quia dolor sit amet, consectetur adip civelit, sed quia non numquam eius modi tempora incidunt labore dolore magna aliquam quaerat voluptatem corporis suscipit laboriosam.
   %p Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et volup tates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delec tus ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperioresrepe.
@@ -45,40 +44,46 @@
   #sidebar
     %ul
       %li
+        %h2 Dashboard:
+        .side_box
+          %a{:href=>"#"}
+            %img{:src=>"/images/team1.jpg"}
+          %ul
+            %li
+              %a{:href=>"#"}
+                %strong
+                  = current_user.first_name
+                  = current_user.last_name
+            %li
+              %a{:href=>"#"} My Team
+            %li
+              %a{:href=>"#"}  My Profile
+            %li
+              %a{:href=>"#"}  My Photos / Videos
+            %li
+              %a{:href=>"#"}  My Account
+      %li
         %h2 Recommended Team Members:
         .side_box
-          .title-border
-            %img.imgleft{:src=>"images/icon3.png", :alt=>""}
-            %h3 Chad Grange
-            %span Lawyer
-            %br
-            %span Belongs to 38 teams
-            %br
-            %a{:href=>""} Add to your team
-          .title-border
-            %img.imgleft{:src=>"images/icon3.png", :alt=>""}
-            %h3 Jackson Grange
-            %span Real Estate Agent
-            %br
-            %span Belongs to 8 teams
-            %br
-            %a{:href=>""} Add to your team
-            
-      %li
-        %h2 Survey:
-        .side_box
-          #cycle_box
-            %ul.widget_cycle
-              %li
-                %blockquote
-                  %div Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Ut enim ad minim veniam.
-                %span.testi_name
-                  %strong Mark Simon
-                  , Sample Inc
-              %li
-                %blockquote
-                  %div Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Ut enim ad minim veniam.
-                %span.testi_name
-                  %strong Mark Simon
-                  , Sample Inc
+          %ul.row
+            %li
+              %img.imgleft{:alt=>"", :src=>"images/team.gif"}
+              %strong Chad Grange
+              %br
+              %span
+                Lawyer 
+                %br
+                Belongs to 38 teams
+                %br
+                %a{:href=>""} Add to your team
+            %li
+              %img.imgleft{:alt=>"", :src=>"images/team.gif"}
+              %strong Jackson Grange
+              %br
+              %span
+                Real Estate Agent 
+                %br
+                Belongs to 8 teams
+                %br
+                %a{:href=>""} Add to your team
 .clr

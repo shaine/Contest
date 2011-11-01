@@ -6,7 +6,9 @@ class PublicController < ApplicationController
       @user = User.new
     end
     
-    render :private
+    if logged_in?
+      render :private
+    end
   end
 
 end

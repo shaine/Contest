@@ -20,4 +20,12 @@ class ApplicationController < ActionController::Base
       redirect_to :controller=>'user', :action=>'welcome'
     end
   end
+  
+  def logged_in?
+    !current_user.nil?
+  end
+  
+  def current_user
+    session[:user]
+  end
 end
