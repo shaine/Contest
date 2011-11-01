@@ -7,6 +7,8 @@ class PublicController < ApplicationController
     end
     
     if logged_in?
+      @user = current_user
+      
       render :private
     end
   end

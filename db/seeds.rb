@@ -6,4 +6,14 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
-#users = User.create([{:}])
+users = User.create([{:username => 'test@test.com',
+                      :password => Digest::MD5.hexdigest('test'),
+                      :first_name => 'Shaine',
+                      :last_name => 'Hatch',
+                      :url => 'shatch',
+                      :gender => 'male',
+                      :agent => 'Jon Greene',
+                      :manager => 'Jason Skollingsberg',
+                      :high_school => 'Cyprus High',
+                      :home_town => 'Magna, UT'
+                    }])
