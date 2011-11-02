@@ -33,6 +33,7 @@ gem 'sqlite3'
 gem "compass"
 gem "haml"
 gem "html5-boilerplate"
+gem "heroku"
 
 group :test do
   gem 'cucumber-rails'
