@@ -2,7 +2,7 @@ Given /^I am logged out$/ do
   click_link("Logout")
 end
 
-When /^I attempt to login:$/ do |table|
+When /^I attempt to login with:$/ do |table|
   # table is a Cucumber::Ast::Table
   hash = table.hashes.first
   fill_in('login_user[username]', :with => hash[:username])
