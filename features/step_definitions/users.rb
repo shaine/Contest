@@ -1,5 +1,7 @@
 Given /^I am logged out$/ do
-  click_link("Logout")
+  if has_content? "Logout"
+    click_link("Logout")
+  end
 end
 
 When /^I attempt to login with:$/ do |table|
