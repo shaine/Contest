@@ -39,4 +39,5 @@ group :test do
   gem 'cucumber-rails'
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'database_cleaner'
 end
